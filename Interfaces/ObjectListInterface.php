@@ -8,6 +8,13 @@ interface ObjectListInterface {
 
     /**
      *
+     * @param [type] $Object
+     * @return self
+     */
+    public function add($Object);
+
+    /**
+     *
      * @return boolean
      */
     public function is_empty() : bool;

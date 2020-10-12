@@ -11,7 +11,13 @@ class ObjectList implements ObjectListInterface, IteratorAggregate {
 
     protected $_ObjectList;
 
+    #region Method
+
+    public function add($Object) : self { $this->_ObjectList[] = $Object; return $this; }
+
     public function is_empty() : bool { return empty($this->_ObjectList); }
+
+    #endregion
     
     #region Getter
 
