@@ -8,6 +8,12 @@ interface ObjectListInterface {
 
     /**
      *
+     * @return boolean
+     */
+    public function is_empty() : bool;
+
+    /**
+     *
      * @return Traversable
      */
     public function getIterator() : Traversable;

@@ -11,6 +11,8 @@ class ObjectList implements ObjectListInterface, IteratorAggregate {
 
     protected $_ObjectList;
 
+    public function is_empty() : bool { return empty($this->_ObjectList); }
+    
     #region Getter
 
     public function getIterator() : Traversable { yield from $this->_ObjectList; }
