@@ -15,6 +15,8 @@ class ObjectList implements ObjectListInterface, IteratorAggregate {
 
     public function add($Object) : self { $this->_ObjectList[] = $Object; return $this; }
 
+    public function count() : int { return count($this->_ObjectList); }
+    
     public function is_empty() : bool { return empty($this->_ObjectList); }
 
     #endregion
