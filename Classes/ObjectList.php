@@ -35,7 +35,12 @@ class ObjectList implements IteratorAggregate {
     }
 
     public function get(string $offset = '') {
-        // if(!$this->exist($offset)) $get = $this->_ObjectList;
+        if(!$this->exist($offset)) $get = $this->_ObjectList;
+        else $get = $this->_ObjectList[$offset];
+        return $get;
+    }
+
+    public function getElement(string $offset) {
         if(!$this->exist($offset)) $get = null;
         else $get = $this->_ObjectList[$offset];
         return $get;
